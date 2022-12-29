@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. 하위요소 표시 : > -->
+    <!-- table>tr>td -->
+    <table>
+        <tr>
+            <td>학년</td>
+            <td>반</td>
+            <td>이름</td>
+        </tr>
+    </table>
+    <!-- ul>li -->
+    <ul>
+        <li>농담곰</li>
+        <li>퍼그상</li>
+        <li>고로케</li>
+    </ul>
+
+    <!-- 2. 동급 요소 표시 : + -->
+    <!-- ex) div+ul>li -->
+    <div>학교에</div>
+    <p>갔습니다.</p>
+    <ul>
+        <li></li>
+       </ul>
+
+    <!-- 3. 반복 : * -->
+    <!-- ex) table>tr>td*4-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   <div></div>
+
+   <!-- 4. 속성 사용 : [ ] -->
+   <a href="https://namu.wiki/w/%EB%86%8D%EB%8B%B4%EA%B3%B0" target="_blank">농담곰</a>
+
+   <!-- 5. 텍스트 사용 : { } -->
+   <!-- ex) table>td>tr>td{월요일} -->
+   <table>
+    <td>
+        <tr>
+            <td>월요일</td>
+            <td>월요일</td>
+            <td>월요일</td>
+        </tr>
+    </td>
+   </table>
+
+   <ul>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+   </ul>
+
+   <!-- 6. 숫자 : $ -->
+   <!-- ex) ul>li{$번째}*5 -->
+   <ul>
+    <li>1번째</li>
+    <li>2번째</li>
+    <li>3번째</li>
+    <li>4번째</li>
+    <li>5번째</li>
+   </ul>
+
+   <table>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+   </table>
+
+   <!-- ex) table>tr*2>td{$회}*3 -->
+   <!-- ex) h$*6 -->
+   <!-- ex) h${$ 번째}*6 -->
+   <table>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+   </table>
+
+   <h1></h1>
+   <h2></h2>
+   <h3></h3>
+   <h4></h4>
+   <h5></h5>
+   <h6></h6>
+
+   <h1>1 번째</h1>
+   <h2>2 번째</h2>
+   <h3>3 번째</h3>
+   <h4>4 번째</h4>
+   <h5>5 번째</h5>
+   <h6>6 번째</h6>
+
+   <!-- 7. 그룹화 : ( ) -->
+   <!-- ex) .card>(ul>li)+(table>td>td*2) -->
+   <div class="card">
+    <ul>
+        <li></li>
+    </ul>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   </div>
+
+
+</body>
+</html>
