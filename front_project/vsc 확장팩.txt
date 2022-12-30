@@ -1,0 +1,207 @@
+[VSCode 확장팩 설치]
+
+1. Live Server : 브라우저에서 실시간 확인
+2. prettier : 코드 정렬 예쁘게 도와줌
+3. beautify css : 위와 동일.
+4. Code spell checker : 스펠링 체크
+5. Auto Rename tag : 자동으로 태그 수정시 다른 닫는 태그도 같이 수정해 주는 툴
+6. Auto Close Tag : 자동으로 코드 잡아줌
+7. Korean : 한글화
+
+------------------------------------
+[VSCode 기초 설정]
+
+1. ctrl + , : 설정으로 이동
+ - wrap 설정 : Editor : word wrap을 on으로 설정(자동 줄바꿈 설정)
+ - zoom 설정 : Editor : Mouse Wheel Zoom 체크
+ - emmet 설정 : Emmet : Trigger Expantion on Tab
+
+2. space와 tab 간격을 2로 설정
+
+3. beautify : 인덴트를 도와주는 확장팩
+   설정방법 : 바로가기(ctrl+K ctrl+s) -> beautify 검색 -> + 누름 -> 단축키 ctrl + alt + z 적용
+   사용법 : 영역 선택 후 ctrl + alt + z 누르면 들여쓰기(indent)가 맞춰짐
+
+* ctrl + A : 전체 선택
+  shift + tab : 앞으로 끌어옴
+  ctrl + alt + z : 자동 들여쓰기
+  shift + home / end : 한줄 전체 선택
+  블록 지정 후 alt + shift + 아래 방향키 : 복사
+
+-------------------------------------
+
+1. 인라인 요소
+ - 콘텐츠 자신의 크기만큼 영역을 가지는 요소
+ - 개행(줄 바꿈)이 발생하지 않는다.
+ - width, height 값을 적용하지 못한다.
+ - <a>, <span>, <label>, <strong>, <b> 등
+
+2. 블록 요소
+ - 한개의 독립된 덩어리로 화면의 가로 폭 전체를 차지하는 요소
+ - 개행(줄 바꿈)이 발생한다.
+ - width, height 값을 적용할 수 있다.
+ - <div>, <p>, <table>, <article> 등
+
+3. 인라인-블록
+ - 인라인 요소처럼 개행(줄 바꿈) 되지 않는다.
+ - 블록 요소처럼 width, height를 적용할 수 있다.
+ - <img>, <button>, <textarea>, <input>, <select>
+
+-------------------------------------
+
+[emmet 단축 기능 (Abbreviation 약어)]
+
+1. 하위요소 >
+2. 동급요소 +
+3. 반복 *
+4. 속성사용 [ ]
+5. 텍스트 사용 { }
+6. 숫자 $
+7. 그룹화 ( )
+
+--------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. 하위요소 표시 : > -->
+    <!-- table>tr>td -->
+    <table>
+        <tr>
+            <td>학년</td>
+            <td>반</td>
+            <td>이름</td>
+        </tr>
+    </table>
+    <!-- ul>li -->
+    <ul>
+        <li>농담곰</li>
+        <li>퍼그상</li>
+        <li>고로케</li>
+    </ul>
+
+    <!-- 2. 동급 요소 표시 : + -->
+    <!-- ex) div+ul>li -->
+    <div>학교에</div>
+    <p>갔습니다.</p>
+    <ul>
+        <li></li>
+       </ul>
+
+    <!-- 3. 반복 : * -->
+    <!-- ex) table>tr>td*4-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   <div></div>
+
+   <!-- 4. 속성 사용 : [ ] -->
+   <a href="https://namu.wiki/w/%EB%86%8D%EB%8B%B4%EA%B3%B0" target="_blank">농담곰</a>
+
+   <!-- 5. 텍스트 사용 : { } -->
+   <!-- ex) table>td>tr>td{월요일} -->
+   <table>
+    <td>
+        <tr>
+            <td>월요일</td>
+            <td>월요일</td>
+            <td>월요일</td>
+        </tr>
+    </td>
+   </table>
+
+   <ul>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+    <li>사과</li>
+   </ul>
+
+   <!-- 6. 숫자 : $ -->
+   <!-- ex) ul>li{$번째}*5 -->
+   <ul>
+    <li>1번째</li>
+    <li>2번째</li>
+    <li>3번째</li>
+    <li>4번째</li>
+    <li>5번째</li>
+   </ul>
+
+   <table>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+   </table>
+
+   <!-- ex) table>tr*2>td{$회}*3 -->
+   <!-- ex) h$*6 -->
+   <!-- ex) h${$ 번째}*6 -->
+   <table>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+    <tr>
+        <td>1회</td>
+        <td>2회</td>
+        <td>3회</td>
+    </tr>
+   </table>
+
+   <h1></h1>
+   <h2></h2>
+   <h3></h3>
+   <h4></h4>
+   <h5></h5>
+   <h6></h6>
+
+   <h1>1 번째</h1>
+   <h2>2 번째</h2>
+   <h3>3 번째</h3>
+   <h4>4 번째</h4>
+   <h5>5 번째</h5>
+   <h6>6 번째</h6>
+
+   <!-- 7. 그룹화 : ( ) -->
+   <!-- ex) .card>(ul>li)+(table>td>td*2) -->
+   <div class="card">
+    <ul>
+        <li></li>
+    </ul>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   </div>
+
+
+</body>
+</html>
