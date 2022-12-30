@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<body>
+    <form action="/hello">
+        <input type="text" id="t-box"><br><br>
+
+        <button type="button" onclick="show();">버튼1</button>
+        <button type="button">버튼2</button>
+        <button type="reset">버튼3</button>
+
+        <script>
+            function show() {
+                const t = document.getElementById('t-box');
+                alert(t.value)
+            }
+        </script>
+
+    </form>
+</body>
+</html>

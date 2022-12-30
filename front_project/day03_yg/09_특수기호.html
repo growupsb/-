@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특수 기호</title>
+    <link rel="stylesheet" href="./button.css">
+</head>
+<body>
+    <p>
+        Hello world! <br>
+        Hello&nbsp;&nbsp;&nbsp;World! <br>
+        <!-- &nbsp : 스페이스와 동일한 효과 -->
+        &lt;div&gt; 태그는 아무 의미 없는 블럭을 만듭니다.<br>
+        <!-- &lt; &gt는 필터링 -->
+    </p>
+
+    <hr>
+
+    <button class="btn">join</button>
+    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-pink">pink-button</button>
+    <!-- <button class="btn"></button> -->
+    <!-- button.btn -->
+    <!-- <button id="btn"></button> -->
+    <!-- button#btn -->
+
+    <div id="aaa">멍멍이</div>
+    <div id="bbb">야옹이</div>
+
+    <script>
+        const a = document.getElementById('aaa');
+        console.log(a.innerText);
+        // log + tab
+        // a.innerText : aaa 안에 있는 텍스트만 뽑는 것
+
+        const b = document.getElementById('bbb');
+        console.log(b.innerText);
+    </script>
+</body>
+</html>

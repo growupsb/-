@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 문제</title>
+    <style>
+        table, td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        td, th {
+            padding: 10px 20px;
+        }
+        
+        td:last-child {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>아이티스쿨 입사 지원 양식</h1>
+    <table>
+       <tr>
+        <th rowspan="3">개인정보</th>
+        <td>이름</td>
+        <td></td>
+       </tr>
+       <tr>
+        <td>주소</td>
+        <td></td>
+       </tr>
+       <tr>
+        <td>전화번호</td>
+        <td></td>
+       </tr>
+       <tr>
+        <th>지원분야</th>
+        <td colspan="2"></td>
+       </tr>
+    </table>
+</body>
+
+</html>

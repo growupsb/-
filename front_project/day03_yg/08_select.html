@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <!-- 
+        select 옵션에서 label 옵션에 값을 줘도 되고, html5에서는 <option>coffee</option> 사이에 값을 줘도 됨.
+     -->
+    <form action="#">
+        <select>
+            <optgroup label="Coffee">
+                <option label="Americano"></option>
+                <option label="Caffe Mocha"></option>
+                <option label="Cappuccino"></option>
+            </optgroup>
+
+            <optgroup label="Latte" disabled>
+                <option>Caffe Latte</option>
+                <option>Vanila Latte</option>
+            </optgroup>
+        </select>
+        <br><br><br>
+
+        <!-- 
+            input이랑 datalist 연결해서 사용
+            datalist에 id="fruits" 값을 줘서 사용, input list="fruits"으로 연결됨)
+         -->
+         <input type="text" list="fruits">
+         <datalist id="fruits">
+            <option>Apple</option>
+            <option>Orange</option>
+            <option>Mango</option>
+            <option>PineApple</option>
+         </datalist>
+    </form>
+</body>
+</html>

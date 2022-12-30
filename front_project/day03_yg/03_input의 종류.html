@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input의 종류</title>
+</head>
+<body>
+    <form action="/login.jsp" method="get">
+        아이디 : <input type="text" placeholder="아이디 입력"><br>
+        이메일 : <input type="email" placeholder="이메일 입력"><br>
+        비밀번호 : <input type="password" placeholder="비밀번호 입력"><br>
+
+        취미 : 
+        <input type="checkbox" name="hobby" value="study">공부
+        <input type="checkbox" name="hobby" value="reading">독서
+        <input type="checkbox" name="hobby" value="game">게임<br>
+
+        이메일 수신여부 :
+        <input type="radio" name="agree" value="y">예
+        <input type="radio" name="agree" value="y">아니오<br>
+
+        파일 첨부 :
+        <input type="file"><br>
+
+        오늘의 컨디션 :
+        <input type="range" min="0" max="100" value="50" step="10"><br>
+        
+        주문수량 :
+        <input type="number" value="0">
+
+        히든 데이터 :
+        <input type="hidden" name="hidden-data" value="숨겨서 보내지는 데이터"><br>
+
+        <button type="button">기본 버튼</button>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="초기화">
+    </form>
+</body>
+</html>
