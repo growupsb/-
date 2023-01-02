@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 520px;
+            border: 1px solid black;
+            padding: 20px 40px;
+            margin: 0 auto;
+        }
+    
+        fieldset {
+            margin-bottom: 15px;
+        }
+    
+        legend {
+            font-weight: bold;
+        }
+    
+        ul {
+            list-style-type: none;
+        }
+    
+        li {
+            line-height: 30px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <form action="#" method="get"></form>
+    <container>
+        <fieldset>
+            <h1>프런트엔드 개발자 지원서</h1>
+            HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 모집
+            <hr>
+            <ul>
+                <li><strong>개인정보</strong></li>
+                <ul>
+                    <li><label>이름 <input type="text" placeholder="공백없이 입력하세요"></label></li>
+                    <li><label>연락처 <input type="tel"></label></li>
+                </ul><br>
+                <li><strong>지원 분야</strong></li>
+                <ul>
+                    <li>
+                        <label><input type="radio" name="y"> 웹 퍼블리싱</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="y"> 웹 애플리케이션 개발</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="y"> 개발 환경 개선</label>
+                    </li>
+                </ul><br>
+                <li><strong>개발자 지원서 공고 확인 경로</strong></li>
+                <ul>
+                    <li>
+                        <label><input type="checkbox"> 회사 홈페이지</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox"> 신문</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox"> Job 코리아</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox"> TV 광고</label>
+                    </li>
+                </ul><br>
+                <label for="story">
+                    <li><strong>지원동기</strong></li>
+                </label>
+                <textarea id="story" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea><br>
+                <button type=submit>접수하기</button>
+                <button type="reset">다시 쓰기</button>
+            </ul>
+        </fieldset>
+    </container>
+</body>
+
+</html>
