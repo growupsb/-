@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접형제 선택자</title>
+    <style> 
+    /* 조건 : orange 클래스가 있는 태그의 "바로 다음 형제(+)" li에 스타일을 적용 */
+
+    .orange + li {
+        color:yellowgreen;
+    }
+
+    /* 조건 : li 태그의 "바로 다음 형제(+)" li에 스타일 적용 */
+
+    li + li {
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>포도</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* 
+[CSS 기본 작성 형태]
+선택자 {
+    속성1: 속성값1;
+    속성2: 속성값2;
+    } 
+*/
+
+/* @import "파일위치" 는 디자인별로 여러 CSS파일이 있을 경우
+    필요한 CSS 파일을 불러와 사용할 때 적용된다.
+    즉, CSS파일에서 CSS파일을 불러 들일 때 사용한다.
+    예) login에는 login.css 파일, member 가입화면에서는 join.css 파일 적용 */
+
+@import "./common.css";
+
+/* 외부 style CSS 적용 */
+div {
+    color: red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        input[disabled] {
+            /* 투명도 설정 : 20% */
+            opacity: 0.2;
+        }
+        input[type="password"] {
+            color:red;
+            width: 100px;
+        }
+        /* ^ : 클래스 이름이 btn-로 시작하는 것 */
+        button[class^="btn-"] {
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        /* $ : 클래스 이름이 success로 끝나는 것 */
+        button[class$="success"] {
+            background:gray;
+        }
+
+        button[class$="danger"] {
+            background:red;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" value="hello"><br>
+    <input type="password" value="1234"><br>
+    <input type="text" value="disabled text" disabled><br>
+
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+    <button>Normal</button>
+</body>
+</html>

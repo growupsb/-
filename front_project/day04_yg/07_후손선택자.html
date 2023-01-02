@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손 선택자</title>
+    <style>
+       /* 
+       div .orange 의미 (태그(공백.클래스)) : div 태그를 찾아 그 하위태그(후손)의 클래스가 orange인 것을 모두 찾아 style 적용 */
+        div .orange {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>아이티스쿨</h1>
+
+    <div>
+        <h1>후손 선택자 연습용 div</h1>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+            <li class="orange">오렌지</li>
+        </ul>
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+
+    </div>
+</body>
+</html>

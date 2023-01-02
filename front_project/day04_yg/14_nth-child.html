@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child</title>
+    <style>
+        .fruits li:nth-child(1){
+            color:red;
+        }
+        .fruits li:nth-child(2n){
+            color:blue;
+        }
+        .fruits li:nth-child(n+4) {
+        font-size: 20px;
+        }
+        .fruits li:nth-child(3n+1) {
+            font-style: italic;
+        }
+        /* 
+        .food의 첫 번째 자식이 p가 아니기 때문에
+        nth-child(1)을 쓰면 작동하지 않는다. 
+        이럴 땐 :nth-of-type(1)으로 처리해야 한다.*/
+        
+        /* .food p:nth-child(1) {
+            color: yellowgreen;
+        } */
+        .food p:nth-of-type(1){
+            color:yellowgreen;
+        }
+        /* nth-child() 주의점:
+        .food p:nth-child(1) : food에 들어가 첫번째 자식을 먼저 본 후 그녀석이 p인지 확인한다. 
+        .food p:nth-of-type(1) : food에 들어가 p를 먼저 찾고 거기서 첫번째 것에 적용한다.*/
+    </style>
+</head>
+<body>
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>복숭아</li>
+        <li>파인애플</li>
+    </ul>
+    <hr>
+
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬뽕</span>
+    </div>
+    
+    <dov class="box-group">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </dov>
+</body>
+</html>

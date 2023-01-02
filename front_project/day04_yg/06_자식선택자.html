@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식 선택자</title>
+    <style>
+       /* 작성 형태 : 제일 앞에는 조건, 마지막엔 선택자 */
+       /* 
+       > 는 직계 가족을 의미한다.
+       ul > .orange 의미 : 부모가 ul이고 자식태그의 class가 orange인 속성에 style 적용
+        */
+
+        ul > .orange {
+            color:orange;
+        }
+        /* div > h1 의미 : 부모가 div 이고 자식이 h1인 태그에 style 적용 */
+        div > h1 {
+            font-size: 20px;
+        }
+
+        div > ul > li {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>아이티스쿨</h1>
+
+    <div>
+        <h1>자식 선택자 연습용 div</h1>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+            <li class="orange">오렌지</li>
+        </ul>
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <style>
+        /* hover는 마우스를 올렸을 때 스타일이 적용됨. 주로 a태그에 사용함 */
+        a:hover {
+            background-color: skyblue;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transition: 0.3s;
+        }
+        .box:active {
+            width: 300px;
+            background-color: yellowgreen;
+        }
+
+        input {
+            width: 100px;
+            border: 1px solid black;
+            padding: 5px 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: red;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.google.com">google</a>
+
+    <div class="box"></div>
+    <br>
+    <input type="text">
+</body>
+</html>

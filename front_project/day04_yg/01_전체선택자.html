@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 선택자</title>
+    <style>
+        /* 전체 선택자 : * 또는 html을 이용 */
+        html {
+            font-weight: bold;
+        }
+
+        * {
+            color: red;
+            font-size: 30px;
+        }
+
+        /* div 후손에 모두 같은 속성 적용 */
+        div * {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>아이티스쿨</h1>
+
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+        </ul>
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span>오렌지</span>
+
+    </div>
+</body>
+</html>

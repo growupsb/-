@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>픽셀(px)</title>
+    <style>
+        body * {
+            border: 2px solid black;
+        }
+
+        .container {
+            width: 600px;
+        }
+        .parent {
+            /* width : 300px; (윗 부모가 600px 이면 자식의 50% 비율은 300px이 된다.) */
+            width: 50%;
+        }
+        .child {
+            /* width: 150px; */
+            /* %는 바로 윗 부모의 영향을 받는다.
+            즉, 자식의 width:50%는 부모의 width: 300px일 때, 자식은 150px이 된다.*/
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <!-- .container>.parent.child*2 -->
+    <div class="container">container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+
+</body>
+</html>
