@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .parent {
+            width: 300px;
+            height: 250px;
+            border: 4px solid #000;
+            /* overflow 처리 : 자식이 부모영역을 넘었을 때 처리하는 방식 */
+            overflow: auto;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 4px solid red;
+            font-size: 40px;
+        }
+
+        .parent .child:first-child{
+            /* 투명도 opacity의 범위 : 0 ~ 1  사이 (예: 0.5면 50% 투명도를 나타냄) */
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style> 
+    span{
+        /* span 태그는 display: inline; 이 기본값으로 설정되어 있다. */
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    a {
+        /* 인라인 요소이면서 가로, 세로 너비 지정 가능한 요소로 지정 */
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: green;
+    }
+
+    input {
+        /* input의 기본 display: inline-block */
+        display: inline-block;
+        width: 100px;
+        height: 20px;
+        margin: 50px 0;
+        padding: 20px 0;
+    }
+
+    input:nth-child(2) {
+        /* 요소 숨기는 방법 1 : display 속성 이용 
+        display: none (요소를 숨기고 그 자리는 뒤에 있던 요소가 숨겨진 자리를 채우게 된다.)
+        */
+        /* display: none; */
+
+        /* 요소 숨기는 방법 2 : opacity(투명도) 속성을 이용 
+        opacity : 0 (요소를 숨기고 그 자리는 비워둔다 => 요소가 투명해 보이지 않을 뿐 그 자리를 차지하고 있는 상태)
+        */
+        opacity: 0;
+    } 
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background: deepskyblue;
+    }
+
+    .hide {
+        /* display: none; */
+        opacity: 0;
+    }
+    </style>
+</head>
+<body>
+    <!-- 블록요소가 아니면(inline 요소라면) width, height를 가질 수 없다. -->
+    <span></span>
+    <a href="#">네이버 링크</a>
+    <!-- 블록요소는 줄 바꿈이 자동으로 일어난다 -->
+    <a href="#">구글 링크</a>
+    <br>
+
+    <div>
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+    </div>
+    <br>
+    
+    <button class="btn">클릭</button>
+    <div class="box"></div>
+
+    <script>
+        // querySelector()는 css선택자 기반으로 data를 가져온다.
+        const box = document.querySelector('.box');
+        const btn = document.querySelector('.btn');
+
+        // btn에 이벤트 달아주기. 클릭(click)했을 때, function() 실행
+        // addEventListener('이벤트', 실행할 함수)
+        btn.addEventListener('click', function(){
+            // box의 클래스 목록(classList)에 접근하여 toggle 실행
+            // toggle('hide') : hide가 있으면 제거, 없으면 추가하는 역할
+            box.classList.toggle('hide');
+        })
+        console.log(box);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            /* padding을 사용하면 추가된 만큼 box의 크기가 증가한다.
+            ex) 가로, 세로 100px 인 박스에 상하좌우 20px의 패딩을 적용하면 박스 크기가 140 x 140px이 된다.
+             */
+             /* padding: 20px; */
+             /* padding-top: 20px; */
+             padding-left: 20px;
+             /* box-sizing : box 크기 변화 없이 내부 여백 설정 */
+             box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello World!</div>
+</body>
+</html>
