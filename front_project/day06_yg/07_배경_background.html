@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px dashed gray;
+            /* background-color: yellow; */
+            /* background-image: url('./images/sky.jpg'); */
+
+            background-size: 200px;
+            background-repeat: no-repeat;
+            /* 가로(x)축으로만 반복 */
+            /* background-repeat: repeat-x; */
+            /* 세로(y)축으로만 반복 */
+            /* background-repeat: repeat-y; */
+            /* background-position: right bottom; */
+            /* background-position: right center; */
+            /* background-position: 200px 50px; */
+
+            background: yellow url('./images/sky.jpg') no-repeat center 50px /cover;
+            /* 
+            cover: 이미지 비율은 유지하지만 더 넓은 너비에 맞춰진다.
+            만약 보여줄 수 있는 곳의 크기가 작다면 이미지가 잘릴 수 있다.
+            ex) 실제 이미지가 500x500, 요소가 400x300 일 때
+            => cover 400x400에 맞춰진다. 그러나 요소의 크기가 400x300이므로 100만큼 이미지가 잘리게 된다. */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
