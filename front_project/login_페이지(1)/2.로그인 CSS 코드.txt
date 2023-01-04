@@ -1,0 +1,94 @@
+body{
+  background-image: url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+
+.login-box {
+  width: 320px;
+  height: 390px;
+  background: radial-gradient(rgba(255,255,255,0.6)) ;
+  box-shadow: 5px 10px 20px rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+}
+
+img {
+  width: 260px;
+  height: 60px;
+  margin-left: 10%;
+  margin-top: 1px;
+}
+
+h2 {
+  color: orange;
+  margin-top: 5px;
+  margin-left: 37%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+h3, input{
+  margin-left: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+input {
+  width: 80%;
+  height: 20px;
+  outline: none;
+  border-top: none;
+  border-left:none;
+  border-right: none;
+  background: transparent;
+  border-bottom: 1px solid #a1a1a1;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: cursive;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+input:hover {
+  border-bottom: 1px solid #ff7200;
+}
+
+::placeholder {
+  color: orange;
+}
+
+i {
+  color: #000;
+  margin-left: -20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 6px 16px;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  background: #000;
+  margin-top: 20px;
+  margin-left: 118px;
+  cursor: pointer; 
+  transition: 0.3s;
+}
+
+button:hover {
+  color: #000;
+  background: #ff7200;
+  border: none;
+}
