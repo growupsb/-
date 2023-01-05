@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_가로 정렬</title>
+    <style>
+        .parent {
+            border: 1px solid red;
+            /* display: flex; 를 사용하면 세로에서 가로로 정렬된다. */
+            /* 참고) flex는 주축과 교차축이 존재함(주축의 기본값:row(가로)이므로 세로->가로로 정렬된다.) */
+            display: flex;
+            /* 부모에 flex를 설정하면 자식들을 마음대로 움직일 수 있다.
+                즉, flex는 부모에게 설정하여 자식들을 조정한다.  */
+
+            /* 1. 가로로 자식들 움직이기 (justify-content) */
+            /* 1) 자식을 끝으로 이동 : justify-content: flex-end; */
+            /* justify-content: flex-end; */
+
+            /* 2) 자식들을 앞으로 이동 : justify-content: flex-start */
+            justify-content: flex-start;
+
+            /* 3) 자식들을 중앙으로 이동 : justify-content: center; */
+            justify-content: center;
+
+            /* 4) 자식들 간 일정 간격 벌리기 justify-content: space-between; */
+            /* 양 끝은 간격 없이 붙어있다. */
+            justify-content: space-between;
+
+            /* 5) 자식들 간 일정 간격 벌림: justify-content: space-around;*/
+            /* 양 끝에 사이사이 간격의 절반 간격을 준다. */
+            justify-content: space-around;
+
+            /* 6) 자식들 간 동일 간격 벌림: justify-content: space-evenly; */
+            justify-content: space-evenly;
+        }
+        .children {
+            background-color: #ff7200;
+            border: 1px solid #ccc;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children">children1</div>
+        <div class="children">children2</div>
+        <div class="children">children3</div>
+    </div>
+</body>
+</html>

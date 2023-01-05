@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            background: red;
+            font-size: 30px;
+            color: #fff;
+            margin: 10px;
+            float: left;
+        }
+        .new-box {
+            width: 200px;
+            height: 150px;
+            background: orange;
+            /* 위 box가 float을 사용해서 그 다음 요소가 겹쳐짐. 위 box 밑에 두고 싶다면 clear 사용 => clear가 수평정렬 흐름을 끝내준다.
+            clear: left/right 혹은 clear:both 사용. 후자가 left, right 구분하지 않고 모두 끝내주기 때문에 편함. 
+            주의! float 해제 속성은 반드시 block 속성을 가져야 한다. 여기서 new-box는 block 속성을 가지고 있다. 04_float해제.html 참고*/
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+    <div class="new-box">4</div>
+</body>
+</html>

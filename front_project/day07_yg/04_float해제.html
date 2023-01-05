@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 해제</title>
+    <style>
+        .container {
+            width: 500px;
+            padding: 20px;
+            border: 4px solid red;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background-color: yellowgreen;
+            font-size: 50px;
+            float: left;
+        }
+        /* float 중첩 해결 방법(권장)
+        가상요소(::before, ::after)를 추가하여 float를 해제한다.
+        주의! : float 해제 속성은 반드시 block 속성을 가져야 한다.
+                가상요소(::before, ::after)에는 content 속성이 필수이다. */
+
+        /* .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+
+        /* 실무 tip : float 해제를 여러 곳에서 해야 한다면 해제하고 싶은 곳에 임의의 클래스(.clearfix)를 만들고 float를 해제할 container에 적용*/
+        .clearfix::after {
+            content : "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+    <div class="container2 clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+    <div class="container3 clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+</body>
+</html>

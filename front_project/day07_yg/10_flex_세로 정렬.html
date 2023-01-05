@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 세로 정렬</title>
+    <style>
+        .parent {
+            border: 1px solid red;
+            display: flex;
+            /* flex가 설정된 부모 영역 밖을 자식들이 움직이지는 못한다.
+            => 부모의 영역을 넓혀줘야 함
+            (height:100vh => 내 화면의 높이를 100%로 사용하겠다.) */
+            height: 100vh;
+            /* 2. 세로로 자식들 움직이기(align-items) */
+            /* 1) 세로 방향으로 제일 끝(아래)에 위치 */
+            align-items: flex-end;
+
+            /* 2) 세로 방향으로 제일 위에 위치 */
+            align-items: flex-start;
+
+            /* 3) 세로 방향으로 중앙에 위치 */
+            align-items: center;
+            /* align-items는 space-between, space-around, space-evenly 기능이 없다. */
+        }
+        .children {
+            background-color: #ff7200;
+            border: 1px solid #ccc;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children">children1</div>
+        <div class="children">children2</div>
+        <div class="children">children3</div>
+    </div>
+</body>
+</html>

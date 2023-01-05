@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .location {
+            /* 1. position : relative 확인 */
+            position: relative;
+            left: 30px;
+            /* position:relative; "내가 있던 위치"에서 박스가 밀리게 된다.
+            다른 요소들은 그자리에 그대로 있다.
+            (relative: 내가 있던 위치에서 top, left, bottom, right로 움직인다.)
+            만약, margin-top을 사용했다면 박스 전체가 한번에 밀리게 됨. 즉, 다른 요소들도 같이 움직인다. */
+            top: 40px;
+
+            /* 2. position:absolute */
+            /* position: absolute;
+            left: 30px;
+            top: 40px; */
+            /* position:absolute; "내가 속한 부모(relative를 갖고 있는) 태그의 위치를 기준"(절대값 기준)으로 주어진 px만큼 움직인다.*/
+            /* 참고)position: static; 웹 브라우저의 기본값 - html에 작성한 순서대로 화면에 보여준다.
+                    static은 top, left, bottom, right을 사용하지 않는다. (static은 기본값임) */
+
+            /* 3. position: fixed; */
+            /* position: fixed;
+            left: 30px;
+            right: 40px; */
+            /* position: fixed; "스크롤바를 내려도 box는 그 자리에 그대로 고정되어 움직이지 않는다."
+            ex) 광고배너
+            position: absolute; 와의 차이는 absolute는 스크롤바를 내리면 box가 없어진다. */
+
+            /* 4. position : sticky */
+            position: sticky;
+            left: 30px;
+            top: 40px;
+            /* sticky는 스크롤바를 내리면 현재 위치에 고정돼서 내려오고,
+               스크롤바가 없으면 relative한 위치로 돌아온다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="box red">box1</div>
+    <div class="box orange location">box2</div>
+    <div class="box blue">box3</div>
+    <!-- position:fixed; 확인을 위한 box -->
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+    <div class="box blue">box3</div>
+
+</body>
+</html>

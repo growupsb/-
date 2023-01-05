@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 연습(1)</title>
+    <style>
+        section.tea {
+            width: 500px;
+            padding: 20px;
+            border: 5px solid #caa;
+            margin: 20px auto;
+        }
+        section.tea h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        section.tea > div {
+            width: 200px;
+            padding: 15px;
+        }
+        section.tea p {
+            text-align: justify;
+            text-indent: 5px;
+            line-height: 1.4;
+        }
+        section.tea .green {
+            background: #dda;
+            float: left;
+        }
+        section.tea .coffee {
+            background: #ba7;
+            float: right;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <section class="tea clearfix">
+        <h1>녹차와 커피</h1>
+        <div class="green">
+            <p>
+                녹차는 은은한 향을 좋아하는 사람들이 애용하는 차이다.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus nam facere veniam rem autem, accusamus tempore ipsam possimus totam maiores delectus fugiat itaque porro excepturi? Modi provident vero illo!
+            </p>
+        </div>
+
+        <div class="coffee">
+            <p>
+                커피는 독한 향을 좋아하는 사람도 매우 좋아하며, 강한 중독 증세를 보이기도 한다.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ut illo saepe iste eos ipsam, deserunt odio explicabo culpa ullam pariatur temporibus? Assumenda facilis quasi animi saepe porro. Earum, blanditiis?
+            </p>
+        </div>
+    </section>
+</body>
+</html>
