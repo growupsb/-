@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(18, 59, 95);
+    padding: 8px 12px;
+  }
+  
+  .navbar__logo {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .navbar__logo i {
+    color: rgb(0, 112, 209);
+  }
+  
+  .navbar__menu {
+    display: flex;
+    /* 한 줄로 나란히 */
+    list-style: none;
+    /* 여기까지 하면 list의 검은 점이 사라지되 글씨가 겹침 */
+    padding-left: 0;
+    /* 검사해보면 패딩이 적용되어 있음. 0으로 설정하면 글씨 겹침이 사라짐 */
+  }
+  
+  .navbar__menu li {
+    padding: 8px 12px;
+  }
+  
+  .navbar__menu li:hover {
+    background-color: rgb(106, 117, 126);
+    border-radius: 10px;
+    /* 마우스 올렸을 때 모서리가 둥글어짐 */
+  }
+  
+  .navbar__icons {
+    list-style: none;
+    color: white;
+    display: flex;
+  }
+  
+  .navbar__icons li {
+    padding: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* .content {
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+  }
+  
+  .content div ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  } */
+  
+  footer {
+    padding: 10px;
+    padding-left: 10px;
+    background-color: rgb(18, 59, 95);
+    color: white;
+    text-align: left;
+  }
