@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인</title>
+    <style>
+        /* navi 영역 */
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .navi {
+            width: 960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+            background-color: pink;
+            font-family: 'Fira Code', monospace;
+        }
+        .navi ul {
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        .navi ul li {
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .navi a:link, .navi a:visited { /* 링크를 클릭했을 때와 클릭하지 않았을 때 */
+            /* hover와 비슷함 */
+            display: block;
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navi a:hover {
+            background-color: rgb(228, 154, 166);
+            color: white;
+            border-radius: 30px;
+        }
+        .navi a:active {
+            background-color: rgb(30, 30, 32);
+        }
+
+        /* 본문 영역 */
+        .contents {
+            margin: 30px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid rgb(197, 195, 195);
+            border-radius: 5px;
+        }
+        #intro:target {
+            /* 가상클래스 : target은 활성화된 링크 태그에 사용하며 선택된 영역에만 스타일을 부여할 수 있다. 
+            주로 현재 활성화된 콘텐츠 영역 및 nav 영역을 강조하기 위해 많이 사용된다. */
+            background-color: #0069e0;
+            color:#fff;
+        }
+        #room:target {
+            background-color: #ff9844;
+        }
+        #reservation:target{
+            background-color: #fff8dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">이용 안내</a></li>
+                <li><a href="#room">객실 소개</a></li>
+                <li><a href="#reservation">예약 방법 및 요금</a></li>
+                <li><a href="#">예약하기</a></li>
+            </ul>
+        </nav>
+
+        <div id="intro" class="contents">
+            <h2>이용 안내</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio atque dolorem aperiam eveniet inventore ratione commodi minus architecto non? Iure excepturi ea dignissimos libero fuga quidem, aliquam possimus aspernatur expedita?
+            </p>
+        </div>
+        <div id="room" class="contents">
+            <h2>객실 소개</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio atque dolorem aperiam eveniet inventore ratione commodi minus architecto non? Iure excepturi ea dignissimos libero fuga quidem, aliquam possimus aspernatur expedita?
+            </p>
+        </div>
+        <div id="reservation" class="contents">
+            <h2>예약 방법 및 요금</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio atque dolorem aperiam eveniet inventore ratione commodi minus architecto non? Iure excepturi ea dignissimos libero fuga quidem, aliquam possimus aspernatur expedita?
+            </p>
+        </div>
+    </div>
+       
+    
+</body>
+</html>
