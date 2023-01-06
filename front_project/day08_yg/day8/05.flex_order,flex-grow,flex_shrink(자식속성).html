@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex_order(순서),flex-grow(늘리기),flex_shrink(줄이기),flex_basis(자식속성)</title>
+
+  <style>
+    .parent {
+      border: 1px solid red;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    /* 1. order 아이템(자식)의 순서를 변경(기본값은 0 이다.) */
+    /* .item1 { order: 2;}
+    .item2 { order: 3;}
+    .item3 { order: 1;} */
+
+    /* 2.flex-grow 부모의 너비가 넓어졌을 때 아이템(자식)은 어떻게 변경할지 결정(기본값 0) */
+
+    /* item2, 3은 기본값 0을 유지하고 item 1이 나머지 공간 모두 차지 */
+    /* .item1 {flex-grow: 1;} */ 
+    /* item2는 기본값 0을 유지하고 item 1과 3이 1:1로 나머지 공간 모두 차지 */ 
+    /* .item3 {flex-grow: 1;} */  
+
+    /* item2는 기본값 0을 유지하고 item 1과 3이 2:1로 나머지 공간 모두 차지 */
+    /* .item1 {flex-grow: 2;}
+    .item3 {flex-grow: 1;} */
+
+    /* 3.flex-shrink 컨테이너(부모)의 너비가 좁아질 때 아이템(자식)은 어떻게 변경할지 결정(기본값은 1) */
+    /* 속성값이 0이면, 부모의 크기가 자식의 크기보다 작아져도 아이템(자식)의 크기가 줄어들지 않고 원래의 크기로 유지된다.
+      속성값이 1이상이면, 부모의 크기가 자식의 크기보다 작아질 때 자식의 크기가 부모의 크기에 맞추어 줄어든다. */
+
+    /* .item1 {flex-shrink: 0;}
+    .item2 {flex-shrink: 1;}
+    .item3 {flex-shrink: 2;} */
+
+    /* 4.flex-basis 아이템(자식)의 기본 크기를 설정한다.
+      -flex-direction이 row이면, 아이템의 width(너비), column이면 height(높이)의 기본 크기
+      -기본값은 auto이며, 이때 width 또는 height가 우선한다.
+      -사용용도 : flex-grow, flex-shrink 사용시 flex-basis 값이 기준이 된다. */
+
+    .item1 {flex-basis: 200px; flex-shrink: 0;}
+    .item2 {flex-basis: 300px; flex-shrink: 1;}
+    .item3 {flex-basis: 100px; flex-shrink: 2;} 
+
+
+    .children {
+      width: 300px;
+      height: 100px;
+      background: tomato;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="children item1">child_item1</div>
+    <div class="children item2">child_item2</div>
+    <div class="children item3">child_item3</div>
+  </div>
+</body>
+</html>

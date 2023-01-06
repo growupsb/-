@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 아이템들 wrapping 하기(부모속성)</title>
+
+  <style>
+    .parent {
+      border: 1px solid red;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;    /* flex 기본값은 row */
+
+      /* 
+      flex-wrap(컨테이너 속성: 부모속성) 
+      -아이템이 많아 졌을 때 어떻게 wrapping 할지 정하는 속성(기본값 : nowrap)
+        nowrap은 아이템들이 많아도 줄 개행없이 한 줄에 표현
+      */
+      /* flex-wrap: nowrap; 기본값 */
+
+      /* wrap은 아이템들이 많을 경우 줄 개행해서 여러 줄에 표현 */
+      flex-wrap: wrap;
+
+      /* 
+      align-contents (컨테이너 속성: 부모속성) 
+      -교차축을 기준으로 아이템을 어떻게 정렬할지 결정
+      -wrapping 된 아이템에 대해서 적용된다.
+      즉, flex-wrap으로 wrapping이 되었을 경우 align-contents 적용 가능
+      */
+
+      /* 1. wrapping 된 아이템 가운데 정렬 */
+      /* align-contents는 flex의 wrap에 속했을때 space-around, space-between, space-evenly를 사용할수 있다. ailgn-items에는 space는 적용할수 없다. */
+      /* align-content: center; */
+
+      /* align-content: space-around; */
+      /* align-content: space-between; */
+      align-content: space-evenly;
+
+
+
+    }
+
+    .children {
+      width: 150px;
+      height: 100px;
+      background: tomato;
+      border: 4px dashed red;
+      border-radius: 10px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="children">child_item1</div>
+    <div class="children">child_item2</div>
+    <div class="children">child_item3</div>
+    <div class="children">child_item4</div>
+    <div class="children">child_item5</div>
+    <div class="children">child_item6</div>
+    <div class="children">child_item7</div>
+    <div class="children">child_item8</div>
+    <div class="children">child_item9</div>
+    <div class="children">child_item10</div>
+    <div class="children">child_item11</div>
+    <div class="children">child_item12</div>
+    <div class="children">child_item13</div>
+    <div class="children">child_item14</div>
+    <div class="children">child_item15</div>
+    <div class="children">child_item16</div>
+    <div class="children">child_item17</div>
+    <div class="children">child_item18</div>
+    <div class="children">child_item19</div>
+    <div class="children">child_item20</div>
+  </div>
+  
+</body>
+</html>

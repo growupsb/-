@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전환_변환_transition(속도)</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      background: red;
+
+      /* 애니메이션은 hover 전에 속성에 주로 설정 */
+      /* transition-property: width, background
+         transition-property: all;
+         transition-duration: 2s; 2초간 지속되어 효과 발생
+         
+         transition 단축속성 설정(1000ms = 1s, 700ms = 0.7s)
+         transition: property duration delay timing-function; 순으로 작성*/
+
+      /* transition: 1s; */
+      /* transition-delay: 2s; */
+      /* transition: 3s;
+      transition-timing-function: ease; */
+
+      /* transition-timing-function:은 속도 변화를 지정
+        1) ease : 시작은 천천히 중간에는 빠르게 그리고 다시 끝에는 천천히 변화
+        2) linear : 일정한 속도로 변화(등속으로 변함)
+        3) ease-in : 천천히 시작해서 빠르게 종료
+        4) ease-out : 빠르게 시작해서 느리게 끝남
+        5) ease-in-out : 시작, 종료 두 지점 다 천천히 변화
+        6) cubic-bezier(N,N,N,N) : 값을 입력하여 가속/감속을 지정
+        예) linear는 cubic-bezier(0,0,1,1), ease는 cubic-bezier(0.25,0.1,0.25,1)와 같다. */
+
+        /* transition: property duration delay timing-function; 순으로 작성 */
+      transition: all 1s 2s linear;
+     
+    }
+
+    .box:hover {
+        width: 300px;
+        background: skyblue;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

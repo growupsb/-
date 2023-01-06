@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index 및 transform 연습</title>
+
+  <style>
+    .container {
+      display: flex;
+      width: 600px;
+      margin: 100px auto;
+    }
+    .container  .box{
+      width: 100px;
+      height: 100px;
+      background: tomato;
+      border: 4px dashed red;
+      border-radius: 10px;
+      font-size: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: -40px;
+      box-shadow: 0 0 10px rgba(255,0,0,0.7);
+      transition: 0.7s;
+    }
+
+    .container .box:hover {
+      background: yellowgreen;
+      background-color: yellow;
+      cursor: pointer;
+      z-index: 10;
+      transform: translateY(-20px);
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- .container>.box.box${$}*5    .box.box$ 하면 2개의 클래스가 들어간다. -->
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션_play-stat</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: tomato;
+
+      animation: size-up 3s linear infinite alternate;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box:hover {
+      /* ampp + tab : 애니메이션 play를 paused(중지)시킴 */
+      animation-play-state: paused;
+      background: skyblue;
+    }
+
+    .box::before {
+      content: "running";
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .box:hover::before {
+      content: "paused!";
+      color: #000;
+    }
+
+    @keyframes size-up {
+      0% {
+        width: 100px;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
