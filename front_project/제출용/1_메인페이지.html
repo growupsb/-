@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Run</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      /* border: 1px solid #000; 
+      테두리때문에 스크롤바 생김*/
+    }
+    body {
+      background-color: rgb(0, 0, 0);
+      color: rgb(0, 0, 0);
+    }
+    .container {
+      max-width: 100%;
+      /* max-width 설정 시 가로폭 줄어도 페이지 잘리지 않음 */
+      margin: 0 auto;
+      box-sizing: border-box;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* 헤더, 섹션, 푸터 3등분 */
+      align-items: center;
+      background: rgb(255, 255, 255);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding: 1.2rem 0;
+      background: black;
+    }
+    header > p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 30px;
+      cursor: pointer;
+      color: white;
+    }
+    .nav {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    header > ul {
+      display: flex;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    header > ul > li {
+      list-style: none;
+      padding: 5px;
+      margin-right: 30px;
+    }
+    header > ul > li:hover {
+      background: rgb(196, 196, 196);
+      border-radius: 10px;
+      color: white;
+    }
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 20px;
+    }
+    section {
+      padding: 0 3rem;
+      text-align: center;
+    }
+    section > p:first-child {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    section > p:last-of-type {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+    input {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 10px;
+      width: 300px;
+      height: 50px;
+      border-radius: 25px;
+      border: 2px solid rgb(0, 0, 0);
+      background: white;
+    }
+    input:hover {
+      cursor: pointer;
+      background: black;
+      color: white;
+      transition: 0.3s;
+      opacity: 0.5;
+      /* 커서 올리면 흐리게 표현 */
+    }
+    footer {
+      margin-bottom: 30px;
+    }
+    footer a {
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>
+        <p>Let's Run</p>
+        <ul>
+          <li>
+            <a
+              href="#"
+              onclick="location.href='2_로그인페이지.html'"
+              class="nav"
+              >로그인</a
+            >
+          </li>
+          <li><a href="#" class="nav">회원가입</a></li>
+          <li><a href="#" class="nav">마이페이지</a></li>
+          <li><a href="#" class="nav">고객센터</a></li>
+        </ul>
+      </header>
+      <section>
+        <div id="box">
+          <a
+            href="https://www.nike.com/kr/t/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-39-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-PnrBdRTA/DH4072-100"
+            target="_blank"
+          >
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/39b9cf32-b076-40ca-8041-32945668121f/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4-39-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-PnrBdRTA.png"
+              width="300px"
+              alt="페가수스39"
+          /></a>
+          <a
+            href="https://www.nike.com/kr/t/%EC%9D%B8%ED%94%BC%ED%8B%B0%EB%8B%88-%EB%A6%AC%EC%95%A1%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-aoi2gRd0/DD3024-001"
+            target="_blank"
+          >
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9b1d4030-03c2-4791-925f-3bf89f50d631/%EC%9D%B8%ED%94%BC%ED%8B%B0%EB%8B%88-%EB%A6%AC%EC%95%A1%ED%8A%B8-3-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-aoi2gRd0.png"
+              width="300px"
+              alt="인피니티 리액트3"
+          /></a>
+          <a
+            href="https://www.nike.com/kr/t/%EC%A4%8Cx-%EC%9D%B8%EB%B9%88%EC%84%9C%EB%B8%94-%EB%9F%B0-%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%8B%88%ED%8A%B8-2-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-HjSH75wj/DC9993-001"
+            target="_blank"
+          >
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9981909e-ad37-45e4-bc8c-efbc2924aeda/%EC%A4%8Cx-%EC%9D%B8%EB%B9%88%EC%84%9C%EB%B8%94-%EB%9F%B0-%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%8B%88%ED%8A%B8-2-%EC%97%AC%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-HjSH75wj.png"
+              width="300px"
+              alt="인빈서블 런 플라이니트2"
+          /></a>
+        </div>
+        <div class="title">함께 시작하는 2023년</div>
+        <p>
+          새해를 맞이하여 운동 목표를 다짐하는 여러분의 도전을 응원합니다.<br />
+          베스트셀러 상품과 함께 새로운 목표를 향한 첫걸음을 시작해 보세요.
+        </p>
+        <a
+          href="https://www.nike.com/kr/w/women-running-shoes-37v7jz5e1x6zy7ok"
+          target="_blank"
+        >
+          <input type="button" value="다른 상품 보러가기"
+        /></a>
+      </section>
+      <footer>
+        <p>Health is worth more than learning, by @Thomas Jefferson</p>
+      </footer>
+    </div>
+  </body>
+</html>
