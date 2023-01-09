@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(./images/bg0.jpg) no-repeat fixed; /* 기본 배경 이미지 */
+            box-sizing: cover;
+        }
+
+        /* @media 속성을 사용해 특정 미디어에서 어떤 CSS를 적용할 것인지 지정함
+           @media 미디어 유형 and (조건)
+           ex) @media screen and (min-width:768px) and (max: width 1439px) {
+                - 적용할 css -
+           } */
+        @media screen and (max-width:1024px) {
+            body {
+                background: url(./images/bg1.jpg) no-repeat fixed; /* 가로 1024px 이하면 bg1.jpg 지정 */
+                box-sizing: cover;
+            }
+        }
+        @media screen and (max-width:768px) {
+            body {
+                background:  url(./images/bg2.jpg) no-repeat fixed; /* 가로 768px 이하면 bg2.jpg 지정 */
+                box-sizing: cover;
+            }
+        }
+        @media screen and (max-width:320px) {
+            body {
+                background:  url(./images/bg3.jpg) no-repeat fixed; /* 가로 320px 이하면 bg3.jpg 지정 */
+                box-sizing: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
