@@ -1,0 +1,84 @@
+cls : 전체 삭제
+dir : 현재 디렉토리 보여줌
+cd : change directory 폴더 이동
+cd / : 최상위 디렉토리(폴더) => 경로가 바뀜
+cd window입력 후 tab => windows
+cd u 입력 후 tab => users
+cd .. : 상위 폴더로 이동
+cd . : 현재 위치를 나타냄
+systeminfo : 시스템 정보 나타냄
+=> 정보만 따로 저장하고 싶다면 바탕화면으로 올라와서 systeminfo > info.txt 
+ipconfig /all : IP 구성 등 알려줌
+ipconfig /all >> : 내용 추가
+ipconfig /all > : 덮어쓰기
+
+----
+
+C:\>dir /?
+=> 옵션 확인
+C:\>dir /a
+=> 모든 하위 디렉토리 보여줌 (멈추는 법: ctrl+c) 
+
+----
+
+C:\>echo hi == print(hi)
+C:\>echo %date% => 오늘 날짜 출력
+C:\>echo %time% => 현재 시간 출력
+
+절대경로는 정확하게 적어야 함. 최상위 C 혹은 D드라이브부터. 
+상대경로는 내가 있는 상대적인 위치에 있는 것.
+
+notepad 만들면 txt 파일 생성. txt 파일 안에 문자 입력하고 text.txt 저장 후 cmd창에 notepad test.txt 입력하면 txt 파일 뜸
+del text.txt 하면 파일 삭제됨.
+
+mkdir : 파일 생성
+rmdir : 파일 삭제. 폴더 안에 파일이 없을 때 폴더가 삭제됨.
+rmdir /?
+-> /S 지정된 디렉터리 자체와, 그 안의 모든 디렉터리 및 파일을 지웁니다.
+        디렉터리 트리를 지우는데 사용합니다.
+-> /Q 조용한 모드로, /S로 디렉터리 트리를 지우는데 문제가 없으면 다시
+        묻지 않습니다.
+
+hi 폴더 안에 a.txt. 파일을 넣고자 할 때
+=> copy a.txt hi
+
+------
+ex)
+C:\Users\KITT\Desktop\hi>copy ..\a.txt .
+.\a.txt을(를) 덮어쓰시겠습니까? (Yes/No/All): No
+        0개 파일이 복사되었습니다.
+
+C:\Users\KITT\Desktop\hi>copy ..\a.txt .
+.\a.txt을(를) 덮어쓰시겠습니까? (Yes/No/All): Yes
+        1개 파일이 복사되었습니다.
+
+C:\Users\KITT\Desktop\hi>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: FAE5-E185
+
+ C:\Users\KITT\Desktop\hi 디렉터리
+
+2022-12-26  오전 10:56    <DIR>          .
+2022-12-26  오전 10:56    <DIR>          ..
+2022-12-26  오전 10:51                18 a.txt
+2022-12-26  오전 10:44               677 cmd.txt
+2022-12-26  오전 10:13                 1 새 텍스트 문서.txt
+               3개 파일                 696 바이트
+               2개 디렉터리  181,050,294,272 바이트 남음
+
+C:\Users\KITT\Desktop\hi>
+
+------
+
+move : 이동 
+
+copy con a.txt : notepad 만들지 않고 터미널에 바로 입력. a.txt 파일이 만들어짐. 입력 끝내려면 ctrl+c
+
+-----
+calc : 계산기
+mspaint : 그림판
+notepad : .txt
+=> 최상위 디렉토리에서도 열림. 뒤에 .exe 붙여도 열림.
+
+
+☆환경 변수 설정하면 어떤 위치에서든지 실행 가능!
