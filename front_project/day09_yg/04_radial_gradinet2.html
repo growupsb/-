@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 키워드 at을 이용한 원형 그라데이션</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        .grad1 {
+            background: blue;
+            /* radial-gradient(모양(크기) at 위치, 시작색, 중간색, 끝색)
+               위치값: left, center, right 중 하나와 top, center, bottom 중 하나
+                       (%로도 지정 가능)  */
+            /* 20% 20% 위치, 회색에서 파란색 지정 */
+            background: radial-gradient(circle at 20% 20%, white, blue);
+        }
+        .grad2 {
+            background: blue;
+            /* radial-gradient(모양(크기) at 위치, 시작색, 중간색, 끝색)
+               위치값: left, center, right 중 하나와 top, center, bottom 중 하나
+                       (%로도 지정 가능)  */
+            /* 20% 20% 위치, 회색에서 파란색 지정 */
+            background: radial-gradient(circle at 20% 20%, pink, black);
+        }
+        .grad3 {
+            background: blue;
+            /* radial-gradient(모양(크기) at 위치, 시작색, 중간색, 끝색)
+               위치값: left, center, right 중 하나와 top, center, bottom 중 하나
+                       (%로도 지정 가능)  */
+            /* 20% 20% 위치, 회색에서 파란색 지정 */
+            background: radial-gradient(circle at 20% 20%, pink, red, black);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

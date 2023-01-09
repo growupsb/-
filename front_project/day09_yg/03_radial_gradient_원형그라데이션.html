@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .grad1 {
+            background: red;
+            /* 원형그라데이션 :  radial-gradient(모양(크기) at 위치), 시작색, 중간색, 끝색)
+               모양을 지정하지 않으면 타원형(ellipse) */
+            background: radial-gradient(white, yellow, red);
+        }
+        .grad2 {
+            background: red;
+            /* 원형 */
+            background: radial-gradient(circle, white, yellow, red);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+</body>
+</html>

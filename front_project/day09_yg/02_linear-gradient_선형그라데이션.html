@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear-gradient</title>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            margin: 30px;
+        }
+        .grad1 {
+            background: blue; /* css를 지원하지 않는 브라우저용 */
+            /* linear-gradient(선형 그라데이션) : 방향(각도), 시작색, 중간색, 끝색 
+               ex) 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로*/
+            background: linear-gradient(to right bottom, blue, white);  
+        }
+        .grad2 {
+            background: red;
+            /* 45도 방향으로 빨간색->흰색 */
+            background: linear-gradient(45deg, red, white);
+        }
+        .grad3 {
+            background: blue;
+            /* 위에서부터 30% 위치에 색상 중지점 지정, 파란색에서 흰색(중지점) 다시 파란색 */
+            background: linear-gradient(to bottom, blue, white 30%, blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

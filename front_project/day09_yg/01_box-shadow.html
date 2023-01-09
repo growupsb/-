@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            border: 1px solid blue;
+            border-radius: 20px;
+        }
+        .box1 {
+            /* box-shadow : x축 y축 blur(흐림) 번짐 색상 */
+            box-shadow: 2px -2px 5px 0px; /* 오른쪽 윗부분에 그림자. y축이 마이너스면 위로  */
+        }
+        .box2 {
+            box-shadow: 5px 5px 15px 5px  blue; /* 오른쪽 아랫부분에 파란색 그림자 */
+        }
+        .box3 {
+            box-shadow: 10px 10px 2px #ccc; 
+        }
+        .box4 {
+            box-shadow: 10px 10px 10px 5px #ccc;
+        }
+        .box5 {
+            box-shadow: 0px 20px 10px #ccc;
+        }
+        .box6 {
+            box-shadow: 0px 0px 20px #ccc;
+        }
+        .box7 {
+            box-shadow:10px -5px 5px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+</body>
+</html>

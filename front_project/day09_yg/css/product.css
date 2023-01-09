@@ -1,0 +1,49 @@
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.prod-list {
+    list-style: none;
+    padding: 0;
+}
+.prod-list li {
+    float: left; /* 사진 가로 배치 */
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.prod-list img {
+    margin: 0;
+    padding: 0;
+    float: left;
+    /* 눈에 띄는 변화는 없음 */
+    z-index: 5;
+}
+
+.prod-list .caption {
+    position: absolute; /* 절대 위치. 위치 부모는 li에 잡아줄 것 -> li에 relative 넣으면 글자가 사라짐 -> img와 .caption에 z-index 사용*/
+    top: 200px;
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.6); /* 반투명한 검정색 */
+    opacity: 0;
+    z-index: 10; /* 다른요소바 위에 있도록 */
+    transition: 0.5s ease;
+}
+
+.prod-list li:hover .caption {
+    opacity: 1;
+    transform: translateY(-200px); /* 설명글이 위로 200px 이동 */
+}
+.prod-list .caption h2, .prod-list .caption p {
+    color:#fff;
+    text-align: center;
+} 
