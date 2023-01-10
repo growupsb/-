@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 2단 layout</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        header, aside, footer, article {
+            border: 1px solid #000;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            /* box-sizing: border-box; 내가 만든 박스 유지. 공식적으로 씀. */
+        }
+        header, footer {
+            height: 70px;
+        }
+        aside {
+            flex: none;
+            /* 너비 줄여도 줄어들지 않음
+            본문만 움직이게 됨 */
+            width: 200px;
+        }
+        article {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>헤더부분</header>
+    <div class="container">
+        <aside>사이드바</aside>
+
+        <article>
+            <h2>본문 부분</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quibusdam, voluptatum tenetur nostrum quae fugit? Rerum, odit itaque. Animi illum fugit quisquam iusto, consequuntur cupiditate repudiandae asperiores iure non eaque.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem suscipit animi voluptas quidem atque quam neque totam quod magni dicta quae minima, esse ullam ipsum reprehenderit, rerum ipsa eum illo.</p>
+        </article>
+    </div>
+
+    <footer>푸터부분</footer>
+</body>
+</html>

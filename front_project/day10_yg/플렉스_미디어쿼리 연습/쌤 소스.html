@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스와 미디어쿼리 연습(반응형 웹)</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c2c2c;
+    }
+    header nav {
+      display: flex;
+      width: 90%;
+      margin: 5px auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      justify-content: space-between;
+    }
+
+    header nav .logo{
+      font-size: 2em;
+      padding: 10px;
+      color: #fff;
+    }
+
+    header nav .logo:hover {
+      cursor: pointer;
+      animation: logo-ani 2s infinite;
+    }
+    @keyframes logo-ani {
+      0%{
+        color: red;
+      }
+      25%{
+        color: yellow;
+      }
+      50%{
+        color: skyblue;
+        transform: scale(110%, 110%);
+      }
+      75%{
+        color: tomato;
+      }
+      100%{
+        color: red;
+      }
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+    }
+
+    header nav ul a{
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 25px;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      transition: 0.5s linear;
+    }
+    header nav ul a:hover{
+      border: 1px solid #fff;
+      border-radius: 24px;
+      background: tomato;
+      color: yellow;
+      text-shadow: 0 1px 1px #fff;
+    }
+
+    section {
+      min-width: 100%;
+      border: 1px solid #ccc;
+      margin: 0 10px;
+    }
+    section article {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    section article figure img {
+      width: 350px;
+    }
+    section article figure .txtbox{
+      padding: 0 20px;
+    }
+    section article.box-reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media (min-width: 767px){
+      header nav .hamberger {
+        display: none;
+      }
+    }
+
+    @media (max-width:767px){
+      section article {
+        display: block;
+      }
+      .txtbox {
+        padding: 20px 20px 10px 5px;
+        text-align: justify;
+      }
+      header nav ul li {
+        display: none;
+      }
+
+      header nav .hamberger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+      }
+      header nav .hamberger:hover {
+        color: orange;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">아이티 스쿨</div>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+      </ul>
+      <i class="fa-solid fa-bars hamberger"></i>
+    </nav>
+  </header>
+
+  <section>
+    <article>
+      <figure><img src="./images/bg_moon.jpg" alt=""></figure>
+      <div class="txtbox">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum dolor cupiditate quisquam alias recusandae impedit natus, porro repellendus! Quibusdam reiciendis, commodi sequi laudantium doloribus excepturi autem, ad vero tempore obcaecati perspiciatis eaque eum possimus consequuntur exercitationem iusto, ratione odit. Non a commodi doloribus esse aliquam earum deleniti molestiae facilis tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quo nam corporis aut? Natus dignissimos similique ad quibusdam dolorum. Saepe molestiae deleniti qui eaque repellendus enim quidem doloremque? Consequuntur, obcaecati.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas nemo recusandae accusamus maxime quis dignissimos omnis, fugit reprehenderit perspiciatis quasi magni odio quia, modi nobis, aspernatur dolore! Dolores nobis provident aperiam repellendus dolor, quisquam minima excepturi nesciunt dolorem nostrum fuga nihil deleniti veritatis cupiditate perferendis officiis, nemo voluptate et expedita doloribus rem est obcaecati! Delectus blanditiis dignissimos, fugit enim cumque, ullam quibusdam et nobis nemo iure, quos doloremque magnam?</p>
+      </div>
+    </article>
+
+    <article class="box-reverse">
+      <figure><img src="./images/bg3.jpg" alt=""></figure>
+      <div class="txtbox">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores animi, culpa natus soluta eveniet expedita mollitia voluptates ratione, vero omnis modi blanditiis numquam corporis quod consequuntur tenetur, optio tempora a doloremque possimus officia rem asperiores. Consequuntur eum expedita nulla autem exercitationem placeat. Vitae obcaecati consequatur enim veritatis reprehenderit nesciunt aut cumque sit sunt odio dolores, eveniet neque adipisci! Dolorem unde minima beatae perferendis cupiditate ratione dignissimos aspernatur magnam commodi quos?</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, expedita? Vero reiciendis error, quasi veritatis blanditiis delectus placeat illo aperiam exercitationem unde maxime eaque! Dolore eius sit accusamus ab pariatur facere? Quis animi magnam earum harum aut sed facilis dignissimos recusandae debitis doloribus natus optio dolore et, veniam hic modi velit minus! Obcaecati tempore iste quia culpa? Accusantium autem libero voluptates cum est dicta. Vel nesciunt facilis ut nemo aliquid?</p>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

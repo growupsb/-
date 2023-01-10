@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gird-gap</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: minmax(100px, auto);
+            /* minmax : 최소 줄 높이는 100px. 내용물이 많아지면 길어짐.; */
+
+            /* 컬럼 간격 지정 */
+            /* grid-column-gap: 30px; */
+
+            /* 줄(행)간격 지정 */
+            /* grid-row-gap: 20px; */
+
+            /* 단축 속성 : 컬럼 간격 30px, 줄(행)간격 20px */
+            grid-gap: 20px 30px;
+        }
+        .items {
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit..</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit..</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit..</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit..</div>
+    </div>
+</body>
+</html>

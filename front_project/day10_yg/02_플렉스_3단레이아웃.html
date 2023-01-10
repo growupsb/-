@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        header, aside, article, footer {
+            border: 1px solid #000;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        aside.leftbar {
+            flex: none;
+            width: 200px;
+        }
+        aside.rightbar {
+            flex: none;
+            width: 150px;
+        }
+        article {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>헤더부분</header>
+    <div class="container">
+        <aside class="leftbar">사이드 바</aside>
+        <article>
+            <h2>본문부분</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum, eaque harum dolorem aliquam illo, unde assumenda impedit magni sunt ullam veritatis sit porro quae tenetur sed. Aliquam, quam necessitatibus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime totam minus mollitia dignissimos rem error ratione ut adipisci omnis. Placeat fuga, cumque accusantium iure porro officia natus eligendi molestias!</p>
+        </article>
+        <aside class="rightbar">사이드 바</aside>
+    </div>
+    <footer>푸터 부분</footer>
+</body>
+</html>

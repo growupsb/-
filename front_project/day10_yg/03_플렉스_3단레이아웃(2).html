@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 3단 layout(반응형)</title>
+    <style>
+        header, aside, footer {
+            padding: 1em;
+            /* flex:1 1 20px; 는 flex-grow flew-shrink flex-basis를 의미
+               flex: 1; 은 flex: 1 1 0 과 같은 의미
+               (flex-basis의 기본값은 auto이며 단축속성인 flex에서 그 값을 생략할 경우 0이 적용된다.) */
+            flex: 1 100%; /* 증가너비 1 감소너비 100% 적용 */
+            
+        }
+        .container {
+            display: flex;
+            /* flex-direction : row;
+               flex-wrap: wrap;
+               or
+               flex-flow: row wrap;
+               둘 중 하나쓰되 후자 추천
+               => wrap을 씌워 다음줄로 넘어가게 함*/
+            flex-flow: row wrap;
+        }
+        aside {
+            flex: 1 100%;
+        }
+        header {
+            background: #ccffcc;
+        }
+        aside.leftbar {
+            background: #ff9900;
+        }
+        aside.rightbar {
+            background: #0099ff;
+        }
+        article {
+            background: #ffff99;
+            padding: 1em;
+        }
+        footer {
+            background: #ff99ff;
+        }
+
+        @media all and (min-width:600px) {
+            aside {
+                flex: 1 auto;
+            }
+        }
+        @media all and (min-width:730px) {
+            article {
+                flex: 3 10px;
+            }
+            aside.leftbar {
+                order:1 ;
+            }
+            article {
+                order:2;
+            }
+            aside.rightbar {
+                order:3;
+            }
+            /* order를 통해 배치 순서를 바꿈 */
+        }
+    </style>
+</head>
+<body>
+    <header>헤더부분</header>
+
+    <div class="container">
+        <article>
+            <h2>본문내용</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe, officia, perspiciatis veniam minus dolores earum ab facilis exercitationem, consequuntur inventore alias quasi voluptatibus. Quod aut ducimus at impedit possimus?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur nobis reiciendis eaque quod itaque ipsa cupiditate dolorem asperiores esse. Quia adipisci repellat quasi reprehenderit quis cum modi inventore, ullam minus.</p>
+        </article>
+        <aside class="leftbar">사이드 바</aside>
+        <aside class="rightbar">사이드 바</aside>
+    </div>
+    <footer>푸터부분</footer>
+</body>
+</html>

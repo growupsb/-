@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-areas (영역지정)</title>
+    <style>
+        #wrapper {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+
+            /* 템플릿 영역을 만들어 배치
+            grid-template-areas 속성을 사용해 템플릿 영역을 어떻게 배치할지 지정
+            템플릿 영역을 비워두려면 점(.)을 넣는다.
+            한 행(줄)에 들어갈 템플릿 영역을 큰 따옴표("")로 묶어서 템플릿 영역을 지정 */
+
+            grid-template-areas: 
+                "header header  header"
+                "aside  section section"
+                "aside  .       footer";
+        }
+        .box {
+            padding: 15px;
+            color:#fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .box1 {
+            background-color: #3689ff;
+            grid-area: header;
+        }
+        .box2 {
+            background-color: #00cf11;
+            grid-area: aside;
+        }
+        .box3 {
+            background-color: #ff9019;
+            grid-area: section;
+        }
+        .box4 {
+            background-color: #ffd000;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="box box1">header</div>
+        <div class="box box2">aside</div>
+        <div class="box box3">section</div>
+        <div class="box box4">footer</div>
+    </div>
+</body>
+</html>

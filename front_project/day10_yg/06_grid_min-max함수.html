@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 minmax()함수</title>
+    <style>
+        #wrapper {
+            width: 600px;
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: minmax(100px, auto); /* 줄의 높이를 최소 100px */
+        }
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo eligendi sunt beatae odio. Beatae dicta deleniti repellendus omnis consequatur blanditiis, optio culpa non tenetur sapiente voluptatibus harum distinctio repellat!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet accusamus fugit, quidem repellat cum fuga accusantium laboriosam magnam tenetur similique veniam consectetur cumque nulla a dolore sit voluptatem. Sapiente!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem aut repellendus atque sit, possimus itaque, est quia voluptatibus, sapiente aperiam ullam! Voluptatem inventore similique itaque quos maxime sed modi!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam veniam quia unde corporis enim suscipit dolores neque! Iusto quo, quia sed ducimus repellat at deleniti unde quaerat corporis voluptates molestias.</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis in neque incidunt fugit hic, officia, corrupti exercitationem deserunt tenetur libero nostrum saepe ea asperiores, fugiat odit. Maxime, sint quae. Itaque!</div>
+    </div>
+</body>
+</html>

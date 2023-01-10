@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper1 {
+            display: grid;
+            /* 1. auto-fit : 화면이 넓을 경우 남는 공간 없이 화면을 꽉 채워 컬럼을 표시(컬럼 너비를 늘려서 화면에 맞춤) */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .items {
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+        #wrapper2 {
+            display: grid;
+            /* 2. auto-fill : 컬럼 최소 너비만큼 채워서 표시(200px)하고 남는 공간은 그대로 둔다. */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            margin-bottom: 20px;
+
+            /*  auto-fit과 auto-fill
+                공통점: 화면이 넓어지면 컬럼의 개수를 자동으로 조절해서 개수를 늘려준다.
+                차이점: auto-fit은 남은 공간을 채우고, auto-fill은 남은 공간을 비워둔다. */
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .items {
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>auto-fit일 때</h1>
+    <div id="wrapper1">
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo eligendi sunt beatae odio. Beatae dicta deleniti repellendus omnis consequatur blanditiis, optio culpa non tenetur sapiente voluptatibus harum distinctio repellat!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet accusamus fugit, quidem repellat cum fuga accusantium laboriosam magnam tenetur similique veniam consectetur cumque nulla a dolore sit voluptatem. Sapiente!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem aut repellendus atque sit, possimus itaque, est quia voluptatibus, sapiente aperiam ullam! Voluptatem inventore similique itaque quos maxime sed modi!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam veniam quia unde corporis enim suscipit dolores neque! Iusto quo, quia sed ducimus repellat at deleniti unde quaerat corporis voluptates molestias.</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis in neque incidunt fugit hic, officia, corrupti exercitationem deserunt tenetur libero nostrum saepe ea asperiores, fugiat odit. Maxime, sint quae. Itaque!</div>
+    </div>
+
+    <h1>auto-fill일 때</h1>
+    <div id="wrapper2">
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo eligendi sunt beatae odio. Beatae dicta deleniti repellendus omnis consequatur blanditiis, optio culpa non tenetur sapiente voluptatibus harum distinctio repellat!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eveniet accusamus fugit, quidem repellat cum fuga accusantium laboriosam magnam tenetur similique veniam consectetur cumque nulla a dolore sit voluptatem. Sapiente!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem aut repellendus atque sit, possimus itaque, est quia voluptatibus, sapiente aperiam ullam! Voluptatem inventore similique itaque quos maxime sed modi!</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam veniam quia unde corporis enim suscipit dolores neque! Iusto quo, quia sed ducimus repellat at deleniti unde quaerat corporis voluptates molestias.</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis in neque incidunt fugit hic, officia, corrupti exercitationem deserunt tenetur libero nostrum saepe ea asperiores, fugiat odit. Maxime, sint quae. Itaque!</div>
+    </div>
+</body>
+</html>
