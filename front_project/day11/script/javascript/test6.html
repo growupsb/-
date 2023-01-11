@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /* 객체 : 실세계의 사물
+            : 속성(변수, 값)과 메소드(함수) */
+        var obj={};
+        obj.name='java'; //name은 속성임. obj가 가진 속성.
+        obj.age=27;
+
+        document.writeln("<br><br><br>");
+        document.write(typeof name);
+        document.write(typeof age);
+        console.log(typeof name);
+        document.write("<br><br>");
+        document.write(`${name}의 나이는 ${age}`);
+
+        console.log(obj.name);
+        console.log(obj.age);
+        // log 사용하면 console창에서 확인 가능. 웹페이지에 띄우고 싶다면 document.write 사용
+        document.write(obj);
+        document.write("이름 : "+obj.name);
+        document.write("나이 : "+obj.age);
+        document.write("<br><br>");
+        document.write(typeof obj);
+        console.log(obj.name);
+        console.log(obj.age);
+        var num=100;
+        var res=num%2;
+        document.write(res===0);
+        if(res===0) {
+            comment="짝수";
+        }
+        document.write("<br><br>");
+        document.write("결과:"+comment);
+        var score=10,score2=10;
+        //++score;
+        //score++;
+        document.write("<br><br>");
+        //document.write("전위연산자:"+score);
+        //document.write("후위연산자:"+score);
+        var assignment=score;
+        document.write(assignment+","+score);
+        var assignment2=score2++;
+        document.write(assignment2+","+score2);
+
+
+
+
+
+        var num1=100;
+        num1=null; //값 X
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
