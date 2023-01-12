@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n=1,sum=0;
+        /*while(n<=100){
+           sum+=n;//sum=sum+n; 
+           n++;//n=n+1;
+        }
+        document.write(sum);
+        */
+        /*do{
+            sum+=n;
+            n++;
+        }while(n<=100);
+        document.write(sum);
+        var n2=10;
+        do{
+            n2++;
+        }while(n2<8);
+        document.write(n2);*/
+       /* var kor,math,eng,sum,grade;
+        do{
+            kor=Number(prompt("국어점수","국어점수입력"));
+        }while(kor<0 || kor>100);
+    
+        do{
+            math=Number(prompt("수학점수","수학점수입력"));
+        }while(math<0 || math>100);
+        do{
+            eng=Number(prompt("영어점수","영어점수입력"));
+        }while(eng<0 || eng>100);
+        sum=kor+math+eng;
+        avg=Number.parseInt(sum/3);
+
+        switch(Number.parseInt(avg/10)){
+            case 10:
+            case 9:
+                grade="A";
+                break;
+            case 8:
+                grade="B";
+                break;
+            case 7:
+                grade="C";
+                break;
+            default:
+                grade="X";            
+        }
+        document.write("총점 : "+sum+"<br>");
+        document.write("평균 : "+avg+"<br>");
+        document.write("학점 : "+grade+"학점<br>");
+        */
+       /* var sum=0;
+        for(var i=1;i<=10;i++){
+            sum+=i;
+        }
+        document.write("합="+sum);*/
+        var num1,num2,div,temp=0,sum=0;
+        num1=Number(prompt("첫번째 수 :"));
+        num2=Number(prompt("두번째 수 :"));
+        div5=Number(prompt("배수 :"));
+        if(num1 > num2){
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        for(i=num1;i<=num2;i++){
+            if(i%div==0)
+            sum+=i;
+        }
+        document.write(num1+"에서 "+num2+"사이의 "+div+"배수 합은"+sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
