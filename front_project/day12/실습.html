@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 3과목 점수 입력
+        // 점수 : 0 ~ 100 
+        // 평균점수 90이상이면 A
+        // 평균점수 80이상이면 B
+        // 평균점수 70이상이면 C
+        // 그 외는 X
+        // if, switch case, while, do ~ while 아무거나 사용 가능
+
+        var kor,math,eng,sum,grade;
+        do{
+            kor=Number(prompt("국어 점수","국어 점수 입력"));
+        }while(kor<0 || kor>100);
+        do{
+            math=Number(prompt("수학 점수","수학 점수 입력"));
+        }while(math<0 || math>100);
+        do{
+            eng=Number(prompt("영어 점수","영어 점수 입력"));
+        }while(eng<0 || eng>100);
+        sum=kor+math+eng;
+        avg=Number.parseInt(sum/3);
+
+        switch(Number.parseInt(avg/10)){
+            case 10:
+            case 9:
+                grade="A";
+                break;
+            case 8:
+                grade="B";
+                break;
+            case 7:
+                grade="C";
+                break;    
+            default:
+                grade="X";
+        }
+        document.write("총점 : "+sum+"<br>");
+        document.write("평균 : "+avg+"<br>");
+        document.write("학점 : "+grade+"학점<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
