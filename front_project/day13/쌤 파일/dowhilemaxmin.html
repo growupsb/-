@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number;
+        var max = Number.MIN_SAFE_INTEGER;  // Intialize max with minimum value
+        var min = Number.MAX_SAFE_INTEGER;  // Intialize min with maximum value
+        
+        var choice;
+        
+        do
+        {
+            number = Number(prompt("Enter the number","숫자"))
+        
+            if(number > max)
+            {
+                max = number;
+            }
+            
+            if(number < min)
+            {
+                min = number;
+            }
+        
+           choice=prompt("Do you want to continue y/n?",' ');
+        }while(choice=='y' || choice == 'Y');
+        
+        document.write("Largest number: " + max);
+        document.write("Smallest number: " + min);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

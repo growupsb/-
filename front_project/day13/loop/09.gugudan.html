@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        var table="<table>";
+        for(var i=2;i<=9;i++){
+            table+='<tr>';
+            for(var j=1;j<=9;j++){
+            table+='<td>'+i+"*"+j+"="+i*j; // 칸
+            table+='</td>';
+            }
+            table+='</tr>';
+        }
+        table+='</table>';
+        document.write(table);
+
+        // -----------------------------------------------
+
+        // 행부터 만듦
+        for(var i=1;i<=2;i++){ //행 i=1     i=2     i=2
+            for(var j=1;j<=3;j++){ //열 i=1,9   j=1,9   j=1,9
+                for(var k=1;k<=9;k++){
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
