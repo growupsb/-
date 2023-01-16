@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 값을 입력하고 input();
+        // 2. 합계를 구하고 sum();
+        // 3. 출력을 함 document.write();
+
+        // var r=function() {
+        //     input();
+        //     sum(도서관에서 책 빌림);
+        //     document.write();
+        // }
+        // function input(){ -> 입력을 받음
+        //     sum(도서관에서 책 빌림);
+
+        // }
+        // function sum(도서관에서 책 빌림){
+        //     빌린 도서 읽음
+        //     다 읽음
+        //     return 도서관에 책 반납
+        // }
+
+        // ------------------------------------------------
+
+        function process() {
+            var kor = 90;
+            var math = 90;
+            var eng = 90;
+            var avg = (kor+math+eng) / 3;
+            // if(avg>=90) {
+            //     grade="A";
+            // }else if(avg>=80) {
+            //     grade="B";
+            // }
+            return avg;
+        }
+        function gradelevel(avg_) {
+            if(avg_>=90) {
+                grade="A";
+            }else if(avg_>=80) {
+                grade="B";
+            }
+            return grade; // return이 필요 없다면 document.write("등급:"+avg_) 
+        }
+        var avg_=process(); // var avg_=90; 과 같음
+        var res=gradelevel(avg_); 
+        document.write("홍길동 평균:"+avg_+"<br>"); // document.write(process()); 로 해도 됨
+        document.write("홍길동 등급:"+res);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 전역 변수 : 함수 블록 { } 밖이나 안에서 자유롭게 사용 가능
+        // 지역 변수 : 함수 블록 { } 내에서만 사용 가능
+        var kor = 90;
+        function getScore(){
+            var kor=100;
+        }
+        getScore();
+        document.write(kor);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

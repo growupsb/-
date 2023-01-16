@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function examPass(name, html, css) {
+            var comment = name+"학생은 ";
+            if(html >= 60 && css>=60){
+                comment+="전과목 통과";
+            } else if(html < 60) {
+                comment+="html 재시험"
+            } else if(css < 60) {
+                comment+="css 재시험"
+            }
+            //리턴하지 않을 경우
+            document.write(comment);
+            //리턴시
+            return comment;
+        }
+        function display() {
+            document.write(res1);
+            document.write(res2);
+            document.write(res3);
+
+        }
+        // 1. 리턴하지 않을 경우
+        // examPass("이순신",50,100);
+        // 2. 리턴시
+        var res1 = examPass("이순신",100,100);
+        var res2 = examPass("홍길동",50,100);
+        var res2 = examPass("자바",100,50);
+        
+        display(res1, res2, res3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
