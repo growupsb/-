@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol</title>
+    <script>
+        // var info = {
+        //     subjectName : "자바스크립트",
+        //     subjectName : "제이쿼리"
+        // }
+        var subjectName=Symbol();
+        var info = {
+            [subjectName] : "자바스크립트",
+            subjectName : "제이쿼리"
+        }
+        // document.write(info.subjectName);
+        document.write(info[subjectName]+","+info.subjectName);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var info = {
+            name:'java',
+            age: 25,
+            // email:"damgom@naver.com",
+            printOut: function() {
+                return info.name+","+info.age+"살"; 
+            }
+        }
+        info.email="damgom@naver.com" // 속성 추가
+        //delete info.email; // 속성 삭제
+        info.printOut=function() {
+            return this.name+","+this.age// this는 info 자기자신을 가리킴 
+        }
+        document.write(info.name+"<br>");
+        document.write(info.age+"<br>");
+        document.write(info.email+"<br>");
+        document.write(info.printOut()+"<br>");
+
+
+        // for...in 문(389p)
+        for (var i in info) {
+            document.write(i+" : " + info[i]+"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

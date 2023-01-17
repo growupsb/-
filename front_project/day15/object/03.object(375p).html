@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Info(subject, credit) { // 첫머리는 대문자로 해야 생성자 함수임 
+            this.subject = subject; // 왼쪽 subject는 Info 안에 있는 subject이고 오른쪽 subject는 대입할 것
+            this.credit = credit;
+            this.printOut = function(){
+                return this.subject+","+this.credit + "학점";
+            }
+            function display(sub1) {
+                document.write(sub1.subject+"<br>");
+                document.write(sub1.credit+"<br>"); 
+                document.write(sub1.printOut()+"<br>");
+                document.write("<br>");
+            }    
+        }
+        var sub1 = new Info('JavaScript',2);
+        var sub2 = new Info('java',3);
+        var sub3 = new Info('css',3);
+
+        display(sub1);
+        display(sub2);
+        display(sub3);
+        // document.write(sub1.subject);
+        // document.write(sub1.credit); 
+        document.write(sub1.printOut());
+
+        
+        // document.write(sub2.subject);
+        // document.write(sub2.credit);
+        document.write(sub2.printOut());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

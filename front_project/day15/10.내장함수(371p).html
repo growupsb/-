@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //인코딩, 디코딩함수
+        var encodeStr = "자바스크립트";
+        console.log(encodeURIComponent(encodeStr)); // 영문, 숫자와 () - _ . ~ * ! 을 제외한 문자 인코딩
+        var decodeStr= encodeURIComponent(encodeStr);
+        console.log(decodeURIComponent(decodeStr)); // encodeURIComponent()의 디코딩 함수
+        
+        // 숫자, 유한무한 값 판별 함수
+        var num1 = "숫자";
+        if (!isNaN(num1)) { //isNaN()은 숫자인지 아닌지 판별. NaN은 Not a Number의 약자. 숫자면 false 반환, 숫자가 아니면 true 반환. 여기서는 앞에 !가 붙어 false임
+            console.log("숫자");
+        } else {
+            console.log("숫자아님");
+        }
+        var num2 = 1/0; // 정수 / 정수는 정수여야 함.
+        if(isFinite(num2)) { // isFinite는 유한값인지 무한값인지 판별. 유한값이면 true 반환, 무한값이면 false 반환. 여기서는 무한값임.
+            console.log("유한값");
+        } else {
+            console.log("무한값");
+        }
+
+        // 숫자, 문자 변환 함수
+        var num3="10";
+        console.log(Number(num3)); // Number() : 숫자로 변환해 주는 함수
+        var num4="100px";
+        console.log(parseInt(num4)) // parseInt() : 숫자와 문자가 포함되어 있을 경우 정수 부분만 숫자로 변환해 주는 함수
+        var num5="33.3%";
+        console.log(parseFloat(num5)); //parseFloat() : 숫자와 문자가 포함되어 있을 경우 소수 부분까지 숫자로 변환해 주는 함수
+        var num6=10;
+        console.log(typeof num6); // typeof : 데이터 타입 확인
+        console.log(typeof String(num6)); // String() : 문자로 바꾸어 주는 함수
+
+        // 자바스크립트 코드 변경 함수
+        var str1 = "var num7=10";
+        var str2 = "var num8=20";
+        eval(str1);
+        eval(str2); // eval() : 문자를 자바스크립트 코드로 변경해 주는 함수
+        console.log(num7+num8);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
