@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //정해진 문자의 패턴을 만들 때 사용한다.
+        //정규 표현식 객체 생성 방법
+        // var reg = /JavaScript/;
+        // var reg = new RegExp("Javascript");
+
+        var hpReg = /^\d{10,11}$/; // \d : 숫자 검색, \d{10,11}은 숫자 10~11개, $는 행의 끝 문자가 일치해야 함을 의미
+        var hpReg2 =/^\d{3}-\d{3,4}-\d{4}$/ //010-1234-1234 011-123-1234
+        //시작 번호 01이고 나머지 한 자리 숫자가 올 수 있도록
+        // 010 011 016 017 018 019
+        // () | [] a?b 'a'가 없거나 한 개, 'b'가 없거나 한 개 
+        var hpReg3 =/^01d([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/
+        var emailReg = /^[A-Za-z0-9!#$%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}$/; // .은 .com 같이 표현하는 .
+        var hp1 = '0123456';
+        var hp2 = '01012345678';
+        var email1 = 'abc&1_23&A-BC@icox';
+        var email2 = 'abc&1_23&A-BC@icox.com';
+        var email3 = 'abc&1_23&A-BC@icox.co.kr';
+        var email4 = 'abc&1_23&A-BC@icox.abc.co.kr';
+        document.write(hpReg.test(hp1)+"<br>"); // 숫자가 10~11개가 되지 않음. 길이가 맞지 않아 false
+        document.write(hpReg.test(hp2)+"<br>");
+        document.write(emailReg.test(email1)+"<br>");
+        document.write(emailReg.test(email2)+"<br>");
+        document.write(emailReg.test(email3)+"<br>");
+        document.write(emailReg.test(email4)+"<br>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

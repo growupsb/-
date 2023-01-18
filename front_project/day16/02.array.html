@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var city = ['서울','대전','부산']; // 초기값
+        document.write(city[0]+"<br>"); // 서울 
+        for(var i=0;i<city.length;i++) {
+            document.write(city[i]+"<br>");
+        }
+        for(var i of city) {
+            document.write(i+"<br>");
+        }
+
+        ////////////
+        
+        var num = [1,2,3];
+        var sum = 0;
+        num.forEach(function(value) {
+            return sum+=value;
+        });
+        document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

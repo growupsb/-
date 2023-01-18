@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // charAt() : charAt(n)인 경우 n과 같은 index 번호 문자 반환
+        var str = "JavaScript";
+        document.write(str.charAt(0)+"<br>");
+
+        //indexOf() : indexOf('a')인 경우 'a'를 왼쪽 문자부터 검색하여 일치하는 index 번호를 반환한다.
+        var str = "JavaScript";
+        document.write(str.indexOf('a')+"<br>");
+        document.write(str.indexOf('k')+"<br>"); // 일치하는 문자가 없으면 -1을 반환한다.
+
+        // lastIndexOf() : lastIndexOf('a')인 경우 마지막 'a'를 오른쪽 문자부터 검색하여 일치하는 index 번호를 반환한다.
+        var str = "JavaScript"; 
+        document.write(str.lastIndexOf('a')+"<br>");
+
+        // includes() : includes('str')인 경우 해당 문자열에 'str'문자를 포함하고 있으면 true를 반환한다.
+        var str = "JavaScript";
+        document.write(str.includes('Script')+"<br>");
+
+        // substring() : substring(4,9)인 경우 문자열의 index 번호 4번부터 index 번호 9번 이전까지의 문자를 반환한다.
+        var str = "http://icoxpublish.com";
+        document.write(str.substring(0,4)+"<br>");
+        document.write(str.substring(7)+"<br>"); // 매개변수 값이 하나인 경우 문자열의 index 번호 4번부터 이후의 모든 문자를 반환한다.
+
+        //substr() : substr(4,6)인 경우 문자열 index 번호 4번부터 6개의 문자를 반환한다.
+        var str = "http://icoxpublish.com";
+        document.write(str.substr(7,4)+"<br>");
+
+        //split() :split('')인 경우 ''(공백) 문자를 기준으로 문자열을 분할하고 분할한 문자열들을 배열로 만들어 준다.
+        var str = "JavaScript_jQuery";
+        var division = str.split('_');
+        document.write(division[0]+", "+division[1]+"<br>");
+
+        //replace() : replace('x','y')인 경우 'x' 문자를 'y' 문자로 변경한다.
+        var str = "m_out.gif";
+        document.write(str.replace('out','over')+"<br>");
+
+        //concat() : 문자와 문자를 연결해 준다.
+        var str1 = "java";
+        var str2 = "script";
+        document.write(str1.concat(str2)+"<br>");
+
+        //trim() : 문자열의 앞 뒤 공백을 제거해 준다.
+        var str = " javascript";
+        document.write("web"+str+"<br>"); // web javascript
+        document.write("web"+str.trim()+"<br>");
+
+        //toLowerCase() : 소문자로 변경
+        var str = "LowerCase"
+        document.write(str.toLowerCase()+"<br>");
+        //toUpperCase() : 대문자로 변경
+        var str = "UpperCase";
+        document.write(str.toUpperCase());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
