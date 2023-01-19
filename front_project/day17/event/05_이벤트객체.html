@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            background: green;
+            margin-top: 20px;
+            color:#fff;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var bt = document.getElementById('bt');
+            var area = document.getElementById('area');
+            bt.onclick = function(event) {
+                document.write(event.target);
+                document.write(event.type);
+                document.write(event.clientX);
+                document.write(event.clientY);
+                document.write(event.screenX);
+                document.write(event.screenY);
+            };
+            area.onmousedown = function(event) {
+                document.write(event.button);
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="bt">클릭</button>
+    <div id="area">여기에 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var p;
+        function init() {
+            p=document.getElementById('p');
+            p.addEventListener('mouseover',over);
+            p.addEventListener('mouseout',out);
+        }
+        function over() {
+            p.style.backgroundColor = "pink";
+        }
+        function out() {
+            p.style.backgroundColor = "black";
+            p.style.color = "green";
+        }
+    </script>
+</head>
+<body onload="init()">
+    <strong>addEventListener()를 이용한 리스너 등록</strong>
+    <hr>
+    <p id="p">마우스 올리면 이벤트 변경</p>
+</body>
+</html>

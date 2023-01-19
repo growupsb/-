@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Square3 {
+            #length
+            constructor(length) {
+                this.length=length;
+            }
+            get length () {
+                return this.#length
+            }
+            set length(length) {
+                if(length<=0) {
+                    alert('길이는 0보다 커야 합니다.');
+                }
+                this.#length = length
+            }
+            get perimeter() {
+
+            }
+            get area() {
+                
+            }
+        }
+        const sq = new Square3(100);
+        document.write(sq.length+"<br>") // getter 메소드
+        sq.length = 9000; // setter 메소드
+        document.write(sq.length) // getter 메소드
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
