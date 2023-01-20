@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ch(frmObj,jumin){
+            //주민번호 입력 후 자리 이동  :focus()
+            //function ch(frmObj,jumin){
+            //len=frmObj.valaue.length;
+            // switch(jumin){
+            //    case "ju1" : 6자리이면 jun2로 이동(ju2.focus();)
+            //}
+            //}
+            //jumin저장된 6자리를 두자리씩 끊음
+            //6자리에 입력한 값을 가져옴
+            //frm.ju1.value
+            //year=frm.ju1.value.substr(0,2);
+            //121212 : substr(n1,n2);  년도:substr(0,2),월:substr(2,2),일:substr(4,2)
+            //년=12 월=12 일=12
+            //생년월일에 대입
+            //frm.yy.value=year
+            //성별 확인
+            //sex=frm.ju2.value.substr(0,1);
+            //switch(sex){
+                //1때 : frm.sex[0].checked=true
+                //2때 : frm.sex[1].checked=true
+            //}
+            len=frmObj.value.length;
+            switch(jumin){
+                case "ju1": if(len==6) frm.ju2.focus();break;
+                case "ju2": if(len==7) frm.ok.focus();break;
+            }
+        }
+        //주민번호 챂자리 6자리로 생일 저동 입력하기(2자씩)
+        function jumin(){
+            year=frm.ju1.value.substr(0,2);
+            month=frm.ju1.value.substr(2,2);
+            day=frm.ju1.value.substr(4,2);
+            
+            frm.yy.value=year;
+            frm.mm.value=month;
+            frm.dd.valaue=day;
+            //성별 확인
+            gender();
+        }
+        function gender(){
+            var gen=frm.ju2.value.substr(0,1);
+            switch(gen){
+                case "1" : frm.sex[0].checked=true;
+                    break;
+                case "2" : frm.sex[1].checked=true;    
+                    break;
+                default: alert("정확한 주민번호를 입력하세요");    
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+		주민번호 : <input type=text size=6 maxlength=6 name=ju1 
+        onKeyPress="ch(this,'ju1')"> -
+		<input type=text size=7 maxlength=7 name=ju2 
+        onKeyPress="ch(this,'ju2')">
+		<input type=button value="확인" name="ok" onClick="jumin()" >
+		<p>
+		생년월일 : <input type=text size=4 name="yy">년
+		<input type=text size=2 name="mm">월
+		<input type=text size=2 name="dd">일
+		
+		<input type="radio" name="sex" class=nostyle>남
+		<input type="radio" name="sex" class=nostyle>여
+        </p>
+	</form>
+</body>
+</html>
