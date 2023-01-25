@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#m1 > span:first-child").css("border","2px solid red");
+            $("#m1 > span:last-child").css("border","2px solid red");
+            $("#m2 > span:first-of-type").css("border","2px solid orange");
+            $("#m2 > span:last-of-type").css("border","2px solid orange");
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <span>내용1_1</span>
+        <span>내용1_2</span>
+        <span>내용1_3</span>
+    </div>
+    <div id="m2">
+        <strong>내용2_1</strong>
+        <span>내용2_2</span>
+        <strong>내용2_3</strong>
+        <span>내용2_4</span>
+    </div>
+</body>
+</html>
