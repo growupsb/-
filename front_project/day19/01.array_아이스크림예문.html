@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(form) {
+            var title = []; // 이전 버전은 var title = new Array(); 이렇게 작성함
+            var msg=[];
+            title[0] = "바닐라 아이스크림을 좋아하는 사람은..";
+            msg[0] = "항상 영화약속을 만들고 좋은 영화를 선정하며, 매너가 좋아 같이 영화를 보러 간 사람에게 그야말로 짱이지만, 바람둥이인데 한가지 흠이다.";
+
+            title[1] = "딸기 아이스크림을 좋아하는 사람은.. ";
+            msg[1] = "콧대가 높아 항상 자기만의 영화와 영화관을 고집하지만 겉보기와는 달리 따뜻하고 애교스러운 점도 많다. 그래서 오랫동안 함께 있어도 질리지 않는 타입. ";
+
+            title[2] = "초코 아이스크림을 좋아하는 사람은..";
+            msg[2] = "영화를 보자고 약속을 만들었다가 귀찮다고 약속을 취소하곤 하는 성격의 소유자. 하지만 영화를 보자고 하면 장르 구분 없이 항상 잘 따라주는 좋은 성격의 소유자.";
+
+            title[3] = "팥빙수를 좋아하는 사람은..";
+            msg[3] = "내성적이어서 영화를 보자고 선뜻 말하지는 못하지만 내심 상대방이 먼저 영화 보자고 권해주기를 바라는 타입. 하지만 영화를 보자고 권한 사람에게 그날을 매우 즐겁게 해줄 만큼 유머감각을 타고난 이야기꾼이기도 하다."
+
+            for(var i=0;i<form.ice.length;i++) {
+                if(form.ice[i].checked == true) {
+                    win = window.open("","제목","width=400 height=200"); //팝업창
+                    win.document.write("<body bgcolor=#fff0ff text=#fff0099>"); //전체 배경색
+                    win.document.write("<h3>"+title[i]+"</h3>"); //제목 출력 (css 적용)
+                    win.document.write("<p style='text-align:justify';line-height:20pt>"+msg[i]+"</p>"); //내용 출력 (css 적용)
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frm">
+        <table>
+            <tr>
+                <td><label><input type="radio" value="1" name="ice">바닐라 아이스크림</label></td>
+                <td><label><input type="radio" value="2" name="ice">딸기 아이스크림</label></td>
+                <td><label><input type="radio" value="3" name="ice">초코 아이스크림</label></td>
+                <td><label><input type="radio" value="4" name="ice">혼자 튀는 팥빙수</label></td>
+            </tr>
+            <tr>
+                <td><input type="image" src="image/ice_button.gif" onclick="display(this.form)"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
