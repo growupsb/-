@@ -1,0 +1,88 @@
+﻿> any : 서브 쿼리 리턴 값 중 최대값
+< any : 서브 쿼리 리턴 값 중 최소값
+< all : 서브 쿼리 리턴값 중 최소값
+> all : 서브 쿼리 리턴 값 중 최대값
+
+1)IN 연산자: 서브쿼리의 출력 결과 중 하나라도 일치하면 참이 된다
+2)ANY 연산자: 서브쿼리의 출력결과와 하나이상의 조건이 만족하면 참이 된다
+
+ANY연산자는  WHERE문의 조건과 비교하여 하나 이상이 일치하면 출력을 하게 된다.
+IN연산자와 ANY연산자의 차이점은  
+IN연산자는 값을 일치(=)되는 것이 하나라도 있을 때 사용하는 것이고
+ANY연산자는 값이 하나라도 크거나 작거나 같거나 (>, <, =)등의 비교연산자를 사용할 때 사용된다.
+
+ANY 라고 표시를 하면 "비교 값 중 하나보다 크냐" 라고 묻는 것이 되며
+그 값들 중 어느 하나 보다 더 크면, 즉 값들의 최소값보다 더 크면 참이 된다.
+
+
+3)ALL 연산자: 출력결과와 모두 일치하면 참이 된다.
+ANY가 최소값보다 더 큰지 묻는 쿼리문이라면 > ALL은 최대값보다 더 큰지 묻는 쿼리문이 될 것이다.
+ALL연산자는 모든 조건을 만족시켜야 되는데 반대로 말하면
+ALL연산자는 모든 행과 비교한 뒤에 하나라도 만족하지 못하면 출력을 하지 않게 된다.
+
+즉 > ALL은 "최대값보다 더 크냐"라고 묻는 뜻이 된다.
+
+
+4)EXISTS 연산자: 서브쿼리의 결과 중에서 만족하는 값이 하나라도 존재하면 참이 된다
+EXIST연산자는 만족하는 값이 하나라도 존재하면 참이 되는 연산자인데
+서브쿼리 값이 존재하는지 존재하지 않는지 알아보고 존재하는 값들만 반환하는 것이다.
+존재만 하면 출력이 된다.
+
+문제(다중 행 처리)
+
+1. SCOTT의 급여와 동일하거나 더 많이 받는 사원의 이름과 급여를 출력하세요.
+select ename,sal
+from emp
+where sal>=(select sal from emp where ename='SCOTT');
+
+2. 직급이 사원인 'CLERK'인 사람의 부서의 부서번호와 부서명을 출력하세요.
+
+select deptno,dname
+from dept
+where deptno  IN  (select deptno from emp where job='CLERK');
+
+
+3. 이름에 T를 포함하고 있는 사원들과 같은 부서에서 근무하는 사원의 사번과 이름을 출력하세요.
+select empno,ename
+from emp
+where  deptno IN  (select deptno from emp where ename LIKE '%T%');
+
+4. 부서 위치가 DALLAS인 모든 사원의 이름, 부서 번호를 출력하세요.
+ select  ename,deptno
+ from emp
+ where deptno=(select deptno from dept where loc='DALLAS');
+
+5. SALES 부서의 모든 사원의 이름과 급여를 출력하세요.
+select ename,sal
+from emp
+where deptno=(select deptno from dept where dname='SALES');
+
+6. KING에게 보고하는(=매니져가 KING인 사원) 모든 사원의 이름과 급여를 출력하세요.
+select ename,sal
+from emp
+where mgr=(select empno from emp where ename='KING');
+
+7. 자신의 급여가 평균급여보다 많고 이름에 S가 들어가는 사원과 동일한 부서에서    근무하는 모든 사원의 이름, 급여를 출력하세요.
+                  sal  > avg(sal)         AND        ename LIKE '%S%'
+
+select ename,sal
+from emp
+where deptno IN(select deptno 
+	          from emp where sal>(select avg(sal) from emp)
+		           AND ename LIKE '%S%');
+
+					     
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
